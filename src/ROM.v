@@ -10,7 +10,7 @@ module instruction_memory #(
     reg [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
 
     initial begin
-    $readmemh("Program.hex", mem);    end
+    $readmemh("sim/Program.hex", mem);    end
 
     assign instruction = mem[addr];
 
